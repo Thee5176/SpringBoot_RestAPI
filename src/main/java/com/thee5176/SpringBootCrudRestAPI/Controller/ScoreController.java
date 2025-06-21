@@ -1,7 +1,5 @@
 package com.thee5176.SpringBootCrudRestAPI.Controller;
 
-//import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,11 +17,6 @@ import com.thee5176.SpringBootCrudRestAPI.Entity.Score;
 public class ScoreController {
 	
 	Score score = new Score(10,20,30);
-	
-	@GetMapping("/health-check")
-	public String getHealthCheck() {
-		return "Situation Normal All Fired Up";
-	}
 	
 	@GetMapping("/score/{scoreType}")
 	public int getWinsLossesTies(@PathVariable String scoreType) {
